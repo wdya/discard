@@ -1,0 +1,154 @@
+/*AUTHOR: Olivia Brennan*/
+
+/*STYLING CHECKBOXES*/
+input[type='checkbox'] {
+	display: none; /*hide the basic HTML version*/
+}
+input[type='checkbox'] + label /*customize here*/ {
+	display: inline-block; /*show*/
+	appearance: none; /*ignore all inherited styling*/
+	width: 50px;
+	height: 50px;
+	vertical-align: bottom; /*keeps them stationary when checked*/
+	background: white;
+	border-radius: 5px; /*rounds the corners*/
+	border: 2px solid #555; /*black, double-thick border*/
+	outline: none;
+	line-height: 50px; /*for the label (the checkmark)*/
+	font-size: 50px; /*same as height*/
+	text-align: center; 
+}
+input[type='checkbox'].smaller + label{
+	width: 35px;
+	height: 35px;
+	line-height: 35px; /*for the label (the checkmark)*/
+	font-size: 35px; /*same as height*/
+}
+input[type='checkbox']:checked + label:after {
+	display: inline-block; /*shows when checked*/
+	content: '\2713'; /*checkmark*/ /*00D7 is an X, but it's small*/
+}
+
+/*STYLING THE LEFT AND RIGHT TABLES*/
+table.sides {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+td.sidesContent {
+	border: 4px solid black;
+	text-align: center;
+	vertical-align: middle;
+	height: 250px;
+}
+td.sidesContent.highlight{
+	background: yellow;
+}
+
+/*STYLING THE FADE-OUT EFFECT*/
+.toFade {
+	opacity: 1;
+	transition: opacity 2s;
+}
+.toFade.fadeOut {
+	opacity: 0;
+}
+
+/*STYLING THE CENTER SCOREBOARD*/
+table.center {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+td.centerLeft {
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	text-align: right;
+	vertical-align: middle;
+	padding: 0 15px;
+}
+td.centerRight {
+	border-top: 1px solid gray;
+	text-align: left;
+	vertical-align: middle;
+	padding: 0 15px;
+}
+td.centerBottom {
+	text-align: center;
+	vertical-align: bottom;
+	background: white;
+}
+
+/*BUFFERING IMAGES TO SPACE OUT LINES*/
+img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+img.icon {
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 20px;
+}
+
+button.rules {
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*TEXT STYLINGS*/
+.title1 /*COOPER, BIGGEST, ALTERNATING COLORS*/ {
+	font-family: Cooper, Arial;
+	font-size: 40px;
+	color: black;
+}
+.title2 {
+	font-family: Cooper, Arial;
+	font-size: 40px;
+	color: red;
+}
+.plain /*STANDARD FONT*/ {
+	font-family: Arial Rounded, Arial;
+	font-size: 24px;
+	color: black;
+}
+.emphasis /*BIGGER, BOLDED, UNDERLINED*/ {
+	font-family: Arial Rounded, Arial;
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: black;
+}
+.bold /*BIGGER, BOLDED*/ {
+	font-family: Arial Rounded, Arial;
+	font-size: 28px;
+	font-weight: bold;
+	color: black;
+}
+.small /*SMALLER*/ {
+	font-family: Arial Rounded, Arial;
+	font-size: 16px;
+	color: black;
+}
+.smallest /*SMALLEST*/ {
+	font-family: Arial Rounded, Arial;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+}
+.numbersB /*COOPER, BIGGER, ALTERNATING COLORS*/ {
+	font-family: Cooper, Arial;
+	font-size: 28px;
+	color: black;
+}
+.numbersR {
+	font-family: Cooper, Arial;
+	font-size: 28px;
+	color: red;
+}
+.bottom {
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	width: 15%;
+	transform: translate(-50%, 0);
+	margin: 0 auto;
+}

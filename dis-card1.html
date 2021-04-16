@@ -1,0 +1,260 @@
+<!--AUTHOR: Olivia Brennan-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DIS-CARD I</title>
+		<link rel="shortcut icon" type="image/png" href="graphics/diamond.png">
+		<link rel="stylesheet" href="bin/dis-card.css">
+	</head>
+
+	<body>
+
+		<!--LOGO AND COPYRIGHT INFO-->
+		<div id="copyrightDIV" class="bottom">
+			<!--TABLE DECLARATION-->
+			<center><table id="tableBottom" class="center" style="width: 100%; float: bottom; float: center">
+				<!--ONLY CELL-->
+				<tr><td class="centerBottom">
+					<!--ATTRIBUTIONS-->
+					<img src="graphics/InclusibleGames.png" width="100%" alt="Inclusible Games logo"> <!--LOGO-->
+					<span class="smallest"><p>Copyright 2021 Diane Guendel
+						<br>Programming credit Olivia Brennan</p></span>
+				</td></tr>
+			</table></center>
+		</div>
+
+		<span class="plain"> <!--SETTING PLAIN AS DEFAULT FOR TABLES-->
+
+		<!--LEFT CELLS-->
+		<table id="tableLeft" class="sides" style="width:40%; float: left;">
+			<tr> <!--FIRST ROW-->
+
+				<!--HEARTS-->
+				<td id="heart" class="sidesContent" style="height:300px">
+					<div class="toFade" id="heartDIV">
+
+					Any <span class="emphasis">heart</span> <!--TITLE-->
+					<br><img src="graphics/heart.png" width="50%" alt="heart"> <!--HEART IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="heart1" name="heart1" onclick="visibility('heart', 3)">
+						<label for="heart1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="heart2" name="heart2" onclick="visibility('heart', 3)">
+						<label for="heart2"></label>
+						<!--BOX 3-->
+						&nbsp;<input type="checkbox" id="heart3" name="heart3" onclick="visibility('heart', 3)">
+						<label for="heart3"></label>
+
+					</div>
+				</td>
+
+				<td>
+					<img src="graphics/suits.png" width="60%" align="right" alt="suits"> <!--LOGO (CARDS)-->
+				</td>
+			</tr>
+
+			<tr> <!--SECOND ROW-->
+
+				<!--DIAMONDS-->
+				<td id="diamond" class="sidesContent" style="height:300px"> <!--CELL DECLARATION-->
+					<div class="toFade" id="diamondDIV"> <!--ALL CONTENTS IN DIV: THE DIV IS WHAT FADES OUT-->
+
+					Any <span class="emphasis">diamond</span> <!--TITLE-->
+					<br><img src="graphics/diamond.png" width="50%" alt="diamond"> <!--DIAMOND IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="diamond1" name="diamond1" onclick="visibility('diamond', 3)">
+						<label for="diamond1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="diamond2" name="diamond2" onclick="visibility('diamond', 3)">
+						<label for="diamond2"></label>
+						<!--BOX 3-->
+						&nbsp;<input type="checkbox" id="diamond3" name="diamond3" onclick="visibility('diamond', 3)">
+						<label for="diamond3"></label>
+
+					</div>
+				</td>
+
+				<!--NUMBER-->
+				<td id="number" class="sidesContent">
+					<div class="toFade" id="numberDIV">
+
+					Any <span class="emphasis">number</span> card <!--TITLE-->
+					<br> <!--SAMPLES (ALTERNATING COLOR)-->
+						<span class="numbersB">A</span>
+						<span class="numbersR">2</span>
+						<span class="numbersB">3</span>
+						<span class="numbersR">4</span>
+						<span class="numbersB">5</span>
+						<span class="numbersR">6</span>
+						<span class="numbersB">7</span>
+						<span class="numbersR">8</span>
+						<span class="numbersB">9</span>
+						<span class="numbersR">10</span>
+
+					<br><img src="graphics/ace_spades_tilt.png" width="32%" alt="Ace of Spades"> <!--CARD IMAGE-->
+						&nbsp;<img src="graphics/four_diamonds.png" width="30%" alt="Four of Diamonds"> <!--CARD IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="number1" name="number1" onclick="visibility('number', 3)">
+						<label for="number1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="number2" name="number2" onclick="visibility('number', 3)">
+						<label for="number2"></label>
+						<!--BOX 3-->
+						&nbsp;<input type="checkbox" id="number3" name="number3" onclick="visibility('number', 3)">
+						<label for="number3"></label>
+
+					</div>
+				</td>
+
+			</tr>
+		</table>
+
+		<!--RIGHT TABLE-->
+		<table id="tableRight" class="sides" style="width:40%; float: right;">
+			<tr> <!--FIRST ROW-->
+
+				<td>
+					<img src="graphics/cards_array.png" width="75%" alt="DIS-CARD Logo"> <!--LOGO (CARDS)-->
+				</td>
+
+				<!--CLUBS-->
+				<td id="club" class="sidesContent" style="height:300px">
+					<div class="toFade" id="clubDIV">
+
+					Any <span class="emphasis">club</span> <!--TITLE-->
+					<br><img src="graphics/club.png" width="50%" alt="club"> <!--CLUB IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="club1" name="club1" onclick="visibility('club', 3)">
+						<label for="club1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="club2" name="club2" onclick="visibility('club', 3)">
+						<label for="club2"></label>
+						<!--BOX 3-->
+						&nbsp;<input type="checkbox" id="club3" name="club3" onclick="visibility('club', 3)">
+						<label for="club3"></label>
+
+					</div>
+				</td>
+
+			</tr>
+
+			<tr> <!--SECOND ROW-->
+
+				<!--FACE-->
+				<td id="face" class="sidesContent" style="height:300px">
+					<div class="toFade" id="faceDIV">
+
+					Any <span class="emphasis">face</span> card <!--TITLE-->
+					<br> <!--SAMPLES (ALTERNATING COLOR)-->
+						<span class="numbersB">J</span>
+						<span class="numbersR">Q</span>
+						<span class="numbersB">K</span>
+
+					<br><img src="graphics/king_hearts.png" width="30%" alt="King of Hearts"> <!--CARD IMAGE-->
+						&nbsp;<img src="graphics/queen_clubs_tilt.png" width="32%" alt="Queen of Clubs"> <!--CARD IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="face1" name="face1" onclick="visibility('face', 3)">
+						<label for="face1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="face2" name="face2" onclick="visibility('face', 3)">
+						<label for="face2"></label>
+						<!--BOX 3-->
+						&nbsp;<input type="checkbox" id="face3" name="face3" onclick="visibility('face', 3)">
+						<label for="face3"></label>
+
+					</div>
+				</td>
+
+				<!--SPADES-->
+				<td id="spade" class="sidesContent" style="height: 300px">
+					<div class="toFade" id="spadeDIV">
+
+					Any <span class="emphasis">spade</span> <!--TITLE-->
+					<br><img src="graphics/spade.png" width="50%" alt="spade"> <!--SPADE IMAGE-->
+
+					<!--BOX 1-->
+					<br><input type="checkbox" id="spade1" name="spade1" onclick="visibility('spade', 3)">
+						<label for="spade1"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="spade2" name="spade2" onclick="visibility('spade', 3)">
+						<label for="spade2"></label>
+						<!--BOX 2-->
+						&nbsp;<input type="checkbox" id="spade3" name="spade3" onclick="visibility('spade', 3)">
+						<label for="spade3"></label>
+
+					</div>
+				</td>
+
+			</tr>
+		</table>
+		</span>
+
+		<center>
+			<br><br>
+			<!--TITLE (ALTERNATING COLORS)-->
+			<p><span class="title1">D</span><span class="title2">I</span><span class="title1">S</span><span class="title2">-</span><span class="title1">C</span><span class="title2">A</span><span class="title1">R</span><span class="title2">D</span>
+				<br><span class="title1">I</span></p>
+			<br><br>
+			<!--CENTER BUTTONS-->
+			<p><button type="button" class="rules" onclick="window.open('documents/DIS-CARD I Instructions.pdf')">How to play</button><br>
+				<button type="button" onClick="playAgain(1)">Play again</button>
+				<button type="button" onClick="keepScore()">Keep score</button></p>
+		</center>
+
+		<!--SCOREBOARD (TOGGLEABLE)-->
+		<div id="scoreDIV">
+			<span class="small"> <!--ALL SCOREBOARD TEXT SHOULD BE SMALL-->
+
+			<center><p>Enter player names.</center>
+
+			<!--EACH CELL IS A PLAYER'S INFO-->
+			<table id="tableCenter" class="center" style="width:20%"> <!--FIT BETWEEN OTHER TWO (40%)-->
+				<tr>
+					<td id="player1cell" class="centerLeft"> <!--COLUMNS ARE ALIGNED DIFFERENTLY, HAVE DIFF CLASSES-->
+						<p><input type="text" id="player1" name="player1" size="8"></p> <!--TEXT BOX FOR NAME INPUT-->
+						<p>Points: <a id="points1">0</a></p> <!--STARTS AT 0, UPDATES LIVE-->
+						<p><button type="button" onClick="getPoints(1)">Add point</button></p> <!--PRESSING ADDS 1 POINT-->
+					</td>
+					<td id="player2cell" class="centerRight">
+						<p><input type="text" id="player2" name="player2" size="8"></p>
+						<p>Points: <a id="points2">0</a></p>
+						<p><button type="button" onClick="getPoints(2)">Add point</button></p>
+					</td>
+				</tr>
+				<tr>
+					<td id="player3cell" class="centerLeft">
+						<p><input type="text" id="player3" name="player3" size="8"></p>
+						<p>Points: <a id="points3">0</a></p>
+						<p><button type="button" onClick="getPoints(3)">Add point</button></p>
+					</td>
+					<td id="player4cell" class="centerRight">
+						<p><input type="text" id="player4" name="player4" size="8"></p>
+						<p>Points: <a id="points4">0</a></p>
+						<p><button type="button" onClick="getPoints(4)">Add point</button></p>
+					</td>
+				</tr>
+				<tr>
+					<td id="player5cell" class="centerLeft">
+						<p><input type="text" id="player5" name="player5" size="8"></p>
+						<p>Points: <a id="points5">0</a></p>
+						<p><button type="button" onClick="getPoints(5)">Add point</button></p>
+					</td>
+					<td id="player6cell" class="centerRight">
+						<p><input type="text" id="player6" name="player6" size="8"></p>
+						<p>Points: <a id="points6">0</a></p>
+						<p><button type="button" onClick="getPoints(6)">Add point</button></p>
+					</td>
+				</tr>
+			</table>
+			</span>
+		</div>
+
+		<script src="bin/dis-card.js"></script>
+	</body>
+</html>
