@@ -93,6 +93,12 @@ button.rules {
 	font-size: 18px;
 	font-weight: bold;
 }
+button.reset {
+	line-height: 38px;
+	font-size: 38px;
+	font-weight: bold;
+	background-color: lightgray;
+}
 
 /*TEXT STYLINGS*/
 .title1 /*COOPER, BIGGEST, ALTERNATING COLORS*/ {

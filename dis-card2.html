@@ -45,6 +45,10 @@
 						<label for="diamond2"></label>
 
 					</div>
+
+					<div id="diamondButton">
+						<p><button type="button" class="reset" onClick="resetCell('diamond', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 				<!--HEARTS-->
@@ -61,6 +65,10 @@
 						&emsp;<input type="checkbox" id="heart2" name="heart2" onclick="visibility('heart', 2)">
 						<label for="heart2"></label>
 
+					</div>
+
+					<div id="heartButton">
+						<p><button type="button" class="reset" onClick="resetCell('heart', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -91,6 +99,10 @@
 						<label for="lt72"></label>
 
 					</div>
+
+					<div id="lt7Button">
+						<p><button type="button" class="reset" onClick="resetCell('lt7', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 				<!--GT6-->
@@ -119,6 +131,10 @@
 						<label for="gt62"></label>
 
 					</div>
+
+					<div id="gt6Button">
+						<p><button type="button" class="reset" onClick="resetCell('gt6', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 			</tr>
@@ -139,6 +155,10 @@
 						&emsp;<input type="checkbox" id="red2" name="red2" onclick="visibility('red', 2)">
 						<label for="red2"></label>
 
+					</div>
+
+					<div id="redButton">
+						<p><button type="button" class="reset" onClick="resetCell('red', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -162,6 +182,10 @@
 						&emsp;<input type="checkbox" id="odd2" name="odd2" onclick="visibility('odd', 2)">
 						<label for="odd2"></label>
 
+					</div>
+
+					<div id="oddButton">
+						<p><button type="button" class="reset" onClick="resetCell('odd', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -187,6 +211,10 @@
 						<label for="club2"></label>
 
 					</div>
+
+					<div id="clubButton">
+						<p><button type="button" class="reset" onClick="resetCell('club', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 				<!--SPADES-->
@@ -203,6 +231,10 @@
 						&emsp;<input type="checkbox" id="spade2" name="spade2" onclick="visibility('spade', 2)">
 						<label for="spade2"></label>
 
+					</div>
+
+					<div id="spadeButton">
+						<p><button type="button" class="reset" onClick="resetCell('spade', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -229,6 +261,10 @@
 						&emsp;<input type="checkbox" id="face2" name="face2" onclick="visibility('face', 2)">
 						<label for="face2"></label>
 
+					</div>
+
+					<div id="faceButton">
+						<p><button type="button" class="reset" onClick="resetCell('face', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -260,6 +296,10 @@
 						<label for="number2"></label>
 
 					</div>
+
+					<div id="numberButton">
+						<p><button type="button" class="reset" onClick="resetCell('number', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 			</tr>
@@ -285,6 +325,10 @@
 						<label for="even2"></label>
 
 					</div>
+
+					<div id="evenButton">
+						<p><button type="button" class="reset" onClick="resetCell('even', 2)">&#8635;</button></p>
+					</div>
 				</td>
 
 				<!--BLACK-->
@@ -302,6 +346,10 @@
 						&emsp;<input type="checkbox" id="black2" name="black2" onclick="visibility('black', 2)">
 						<label for="black2"></label>
 
+					</div>
+
+					<div id="blackButton">
+						<p><button type="button" class="reset" onClick="resetCell('black', 2)">&#8635;</button></p>
 					</div>
 				</td>
 
@@ -334,36 +382,42 @@
 					<td id="player1cell" class="centerLeft"> <!--COLUMNS ARE ALIGNED DIFFERENTLY, HAVE DIFF CLASSES-->
 						<p><input type="text" id="player1" name="player1" size="8"></p> <!--TEXT BOX FOR NAME INPUT-->
 						<p>Points: <a id="points1">0</a></p> <!--STARTS AT 0, UPDATES LIVE-->
-						<p><button type="button" onClick="getPoints(1)">Add point</button></p> <!--PRESSING ADDS 1 POINT-->
+						<p><button type="button" onClick="getPoints(1, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(1, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 					<td id="player2cell" class="centerRight">
 						<p><input type="text" id="player2" name="player2" size="8"></p>
 						<p>Points: <a id="points2">0</a></p>
-						<p><button type="button" onClick="getPoints(2)">Add point</button></p>
+						<p><button type="button" onClick="getPoints(2, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(2, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 				</tr>
 				<tr>
 					<td id="player3cell" class="centerLeft">
 						<p><input type="text" id="player3" name="player3" size="8"></p>
 						<p>Points: <a id="points3">0</a></p>
-						<p><button type="button" onClick="getPoints(3)">Add point</button></p>
+						<p><button type="button" onClick="getPoints(3, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(3, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 					<td id="player4cell" class="centerRight">
 						<p><input type="text" id="player4" name="player4" size="8"></p>
 						<p>Points: <a id="points4">0</a></p>
-						<p><button type="button" onClick="getPoints(4)">Add point</button></p>
+						<p><button type="button" onClick="getPoints(4, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(4, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 				</tr>
 				<tr>
 					<td id="player5cell" class="centerLeft">
 						<p><input type="text" id="player5" name="player5" size="8"></p>
 						<p>Points: <a id="points5">0</a></p>
-						<p><button type="button" onClick="getPoints(5)">Add point</button></p>
+						<p><button type="button" onClick="getPoints(5, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(5, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 					<td id="player6cell" class="centerRight">
 						<p><input type="text" id="player6" name="player6" size="8"></p>
 						<p>Points: <a id="points6">0</a></p>
-						<p><button type="button" onClick="getPoints(6)">Add point</button></p>
+						<p><button type="button" onClick="getPoints(6, true)">&#8593;</button> <!--PRESSING ADDS 1 POINT-->
+							<button type="button" onClick="getPoints(6, false)">&#8595;</button></p> <!--PRESSING SUBTRACTS 1 POINT-->
 					</td>
 				</tr>
 			</table>
@@ -371,5 +425,11 @@
 		</div>
 
 		<script src="bin/dis-card.js"></script>
+		<script>
+			//HIDE RESET BUTTONS
+			resetButtons = ["diamond", "heart", "lt7", "gt6", "red", "odd", "club", "spade", "face", "number", "even", "black"];
+			for (var i = 0; i < resetButtons.length; i++)
+				document.getElementById(resetButtons[i] + "Button").style.display = "none";
+		</script>
 	</body>
 </html>
