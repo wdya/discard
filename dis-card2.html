@@ -47,7 +47,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="diamondButton">
+					<div class="buttonDIV" id="diamondButton">
 						<p><button type="button" class="reset" onClick="resetCell('diamond', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -69,7 +69,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="heartButton">
+					<div class="buttonDIV" id="heartButton">
 						<p><button type="button" class="reset" onClick="resetCell('heart', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -103,7 +103,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="lt7Button">
+					<div class="buttonDIV" id="lt7Button">
 						<p><button type="button" class="reset" onClick="resetCell('lt7', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -136,7 +136,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="gt6Button">
+					<div class="buttonDIV" id="gt6Button">
 						<p><button type="button" class="reset" onClick="resetCell('gt6', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -162,7 +162,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="redButton">
+					<div class="buttonDIV" id="redButton">
 						<p><button type="button" class="reset" onClick="resetCell('red', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -190,7 +190,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="oddButton">
+					<div class="buttonDIV" id="oddButton">
 						<p><button type="button" class="reset" onClick="resetCell('odd', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -219,7 +219,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="clubButton">
+					<div class="buttonDIV" id="clubButton">
 						<p><button type="button" class="reset" onClick="resetCell('club', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -241,7 +241,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="spadeButton">
+					<div class="buttonDIV" id="spadeButton">
 						<p><button type="button" class="reset" onClick="resetCell('spade', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -272,7 +272,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="faceButton">
+					<div class="buttonDIV" id="faceButton">
 						<p><button type="button" class="reset" onClick="resetCell('face', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -307,7 +307,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="numberButton">
+					<div class="buttonDIV" id="numberButton">
 						<p><button type="button" class="reset" onClick="resetCell('number', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -337,7 +337,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="evenButton">
+					<div class="buttonDIV" id="evenButton">
 						<p><button type="button" class="reset" onClick="resetCell('even', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -360,7 +360,7 @@
 					</div>
 
 					<!--RESET BUTTON-->
-					<div id="blackButton">
+					<div class="buttonDIV" id="blackButton">
 						<p><button type="button" class="reset" onClick="resetCell('black', 2)">&#8635;</button></p>
 					</div>
 				</td>
@@ -437,11 +437,6 @@
 		</div>
 
 		<script src="bin/dis-card.js"></script>
-		<script>
-			//HIDE RESET BUTTONS
-			resetButtons = ["diamond", "heart", "lt7", "gt6", "red", "odd", "club", "spade", "face", "number", "even", "black"];
-			for (var i = 0; i < resetButtons.length; i++)
-				document.getElementById(resetButtons[i] + "Button").style.display = "none";
-		</script>
+		<script>hideResets(2);</script>
 	</body>
 </html>

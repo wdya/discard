@@ -39,13 +39,11 @@ td.sidesContent {
 	text-align: center;
 	vertical-align: middle;
 	height: 250px;
+	position: relative;
 }
 td.sidesContent.highlight {
 	background: yellow;
 }
-/*td.sidesContent.bottom {
-	vertical-align: bottom;
-}*/
 
 /*STYLING THE FADE-OUT EFFECT*/
 .toFade {
@@ -54,6 +52,12 @@ td.sidesContent.highlight {
 }
 .toFade.fadeOut {
 	opacity: 0;
+}
+.buttonDIV {
+	position: absolute;
+	height: 250px;
+	top: 0; left: 0;
+	transform: translate(0, -24px);
 }
 
 /*STYLING THE CENTER SCOREBOARD*/
@@ -100,7 +104,7 @@ button.reset {
 	line-height: 24px;
 	font-size: 24px;
 	font-weight: bold;
-	background-color: white;
+	background-color: lightgray;
 }
 
 /*TEXT STYLINGS*/
@@ -160,4 +164,13 @@ button.reset {
 	width: 15%;
 	transform: translate(-50%, 0);
 	margin: 0 auto;
+}
+a:link {
+	color: #551A8B;
+}
+a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: black;
 }

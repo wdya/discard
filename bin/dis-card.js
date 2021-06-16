@@ -1,13 +1,13 @@
 /*AUTHOR: Olivia Brennan*/
 
+//LIST OF CELLS IN EACH GAME
+var list1 = ["heart", "diamond", "number", "club", "face", "spade"];
+var list2 = ["diamond", "heart", "lt7", "gt6", "red", "odd", "club", "spade", "face", "number", "even", "black"];
+var list3 = ["kind4", "kind3", "kind2", "face", "lt7", "gt6", "row3", "row4", "red", "black", "even", "odd"];
+
 //HOUSEKEEPING WHILE GAME LOADS
 window.onload = function() {	
 	document.getElementById("scoreDIV").style.display = "none"; //HIDE SCOREBOARD
-
-	// //HIDE RESET BUTTONS
-	// resetButtons = ["heart", "diamond", "number", "club", "face", "spade"];
-	// for (var i = 0; i < resetButtons.length; i++)
-	// 	document.getElementById(resetButtons[i] + "Button").style.display = "none";
 
 	//CONSTANTLY CHECK FOR CLICKS (TRIGGERING toggleHighlight) IN EACH OF THE 12 CELLS
 	var cells = document.getElementsByClassName("sidesContent");
@@ -34,17 +34,11 @@ function toggleHighlight() {
 	cell.classList.toggle('highlight');
 }
 
-/*//SWITCH 'BOTTOM' CELL CLASS ON AND OFF (FOR RESET BUTTONS)
-function toggleBottom() {
-	var cell = this();
-	cell.classList.toggle('bottom');
-}*/
-
 //RESET ALL
 function playAgain(int){
-	if (int === 1) cells = ["heart", "diamond", "number", "club", "face", "spade"];
-	if (int === 2) cells = ["diamond", "heart", "lt7", "gt6", "red", "odd", "club", "spade", "face", "number", "even", "black"];
-	if (int === 3) cells = ["kind4", "kind3", "kind2", "face", "lt7", "gt6", "row3", "row4", "red", "black", "even", "odd"];
+	if (int === 1) cells = list1;
+	if (int === 2) cells = list2;
+	if (int === 3) cells = list3;
 	for (var i = 0; i < cells.length; i++) {
 		document.getElementById(cells[i] + "DIV").style.display = "block"; //RE-SHOW ANY HIDDEN CELLS
 		document.getElementById(cells[i] + "1").checked = false; //UNCHECK EACH FIRST BOX
@@ -68,23 +62,28 @@ function resetCell(cell, int) {
 	divButton.style.display = "none";
 }
 
+//HIDE ALL RESET BUTTONS DEPENDING ON GAME
+function hideResets(int) {
+	if (int === 1) buttons = list1;
+	if (int === 2) buttons = list2;
+	if (int === 3) buttons = list3;
+	for (var i = 0; i < buttons.length; i++)
+		document.getElementById(buttons[i] + "Button").style.display = "none";
+}
+
 //TRIGGER CELL DIV FADE WHEN ALL BOXES ARE CHECKED
 function visibility(cell, int) {
 	divContent = document.getElementById("" + cell + "DIV");
 	divButton = document.getElementById("" + cell + "Button");
 	if (int === 2)
 		if (document.getElementById("" + cell + "1").checked
-			&& document.getElementById("" + cell + "2").checked) {
+			&& document.getElementById("" + cell + "2").checked)
 				fade(divContent, divButton); //RECONSTRUCT elementDIV VARIABLE, CALL FADE
-				//toggleBottom(cell);
-			}
 	if (int === 3)
 		if (document.getElementById("" + cell + "1").checked
 			&& document.getElementById("" + cell + "2").checked
-				&& document.getElementById("" + cell + "3").checked) {
+				&& document.getElementById("" + cell + "3").checked)
 					fade(divContent, divButton); //RECONSTRUCT elementDIV VARIABLE, CALL FADE
-					//toggleBottom(cell);
-				}
 }
 
 //ADD FADE CLASS TO TRIGGERED CELL DIV (ABOVE)
