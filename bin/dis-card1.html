@@ -4,8 +4,8 @@
 <html>
 	<head>
 		<title>DIS-CARD I</title>
-		<link rel="shortcut icon" type="image/png" href="graphics/diamond.png">
-		<link rel="stylesheet" href="bin/dis-card.css">
+		<link rel="shortcut icon" type="image/png" href="../graphics/diamond.png">
+		<link rel="stylesheet" href="dis-card.css">
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 				<!--ONLY CELL-->
 				<tr><td class="centerBottom">
 					<!--ATTRIBUTIONS-->
-					<img src="graphics/InclusibleGames.png" width="100%" alt="Inclusible Games logo"> <!--LOGO-->
+					<img src="../graphics/InclusibleGames.png" width="100%" alt="Inclusible Games logo"> <!--LOGO-->
 					<span class="smallest"><p>Copyright 2021 Diane Guendel
 						<br>Programming credit Olivia Brennan</p></span>
 				</td></tr>
@@ -35,7 +35,7 @@
 					<div class="toFade" id="heartDIV">
 
 					Any <span class="emphasis">heart</span> <!--TITLE-->
-					<br><img src="graphics/heart.png" width="50%" alt="heart"> <!--HEART IMAGE-->
+					<br><img src="../graphics/heart.png" width="50%" alt="heart"> <!--HEART IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="heart1" name="heart1" onclick="visibility('heart', 3)">
@@ -56,7 +56,7 @@
 				</td>
 
 				<td>
-					<img src="graphics/suits.png" width="60%" align="right" alt="suits"> <!--LOGO (CARDS)-->
+					<img src="../graphics/suits.png" width="60%" align="right" alt="suits"> <!--LOGO (CARDS)-->
 				</td>
 			</tr>
 
@@ -67,7 +67,7 @@
 					<div class="toFade" id="diamondDIV"> <!--ALL CONTENTS IN DIV: THE DIV IS WHAT FADES OUT-->
 
 					Any <span class="emphasis">diamond</span> <!--TITLE-->
-					<br><img src="graphics/diamond.png" width="50%" alt="diamond"> <!--DIAMOND IMAGE-->
+					<br><img src="../graphics/diamond.png" width="50%" alt="diamond"> <!--DIAMOND IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="diamond1" name="diamond1" onclick="visibility('diamond', 3)">
@@ -104,8 +104,8 @@
 						<span class="numbersB">9</span>
 						<span class="numbersR">10</span>
 
-					<br><img src="graphics/ace_spades_tilt.png" width="32%" alt="Ace of Spades"> <!--CARD IMAGE-->
-						&nbsp;<img src="graphics/four_diamonds.png" width="30%" alt="Four of Diamonds"> <!--CARD IMAGE-->
+					<br><img src="../graphics/ace_spades_tilt.png" width="32%" alt="Ace of Spades"> <!--CARD IMAGE-->
+						&nbsp;<img src="../graphics/four_diamonds.png" width="30%" alt="Four of Diamonds"> <!--CARD IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="number1" name="number1" onclick="visibility('number', 3)">
@@ -133,7 +133,7 @@
 			<tr> <!--FIRST ROW-->
 
 				<td>
-					<img src="graphics/cards_array.png" width="75%" alt="DIS-CARD Logo"> <!--LOGO (CARDS)-->
+					<img src="../graphics/cards_array.png" width="75%" alt="DIS-CARD Logo"> <!--LOGO (CARDS)-->
 				</td>
 
 				<!--CLUBS-->
@@ -141,7 +141,7 @@
 					<div class="toFade" id="clubDIV">
 
 					Any <span class="emphasis">club</span> <!--TITLE-->
-					<br><img src="graphics/club.png" width="50%" alt="club"> <!--CLUB IMAGE-->
+					<br><img src="../graphics/club.png" width="50%" alt="club"> <!--CLUB IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="club1" name="club1" onclick="visibility('club', 3)">
@@ -175,8 +175,8 @@
 						<span class="numbersR">Q</span>
 						<span class="numbersB">K</span>
 
-					<br><img src="graphics/king_hearts.png" width="30%" alt="King of Hearts"> <!--CARD IMAGE-->
-						&nbsp;<img src="graphics/queen_clubs_tilt.png" width="32%" alt="Queen of Clubs"> <!--CARD IMAGE-->
+					<br><img src="../graphics/king_hearts.png" width="30%" alt="King of Hearts"> <!--CARD IMAGE-->
+						&nbsp;<img src="../graphics/queen_clubs_tilt.png" width="32%" alt="Queen of Clubs"> <!--CARD IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="face1" name="face1" onclick="visibility('face', 3)">
@@ -201,7 +201,7 @@
 					<div class="toFade" id="spadeDIV">
 
 					Any <span class="emphasis">spade</span> <!--TITLE-->
-					<br><img src="graphics/spade.png" width="50%" alt="spade"> <!--SPADE IMAGE-->
+					<br><img src="../graphics/spade.png" width="50%" alt="spade"> <!--SPADE IMAGE-->
 
 					<!--BOX 1-->
 					<br><input type="checkbox" id="spade1" name="spade1" onclick="visibility('spade', 3)">
@@ -229,10 +229,10 @@
 			<br><br>
 			<!--TITLE (ALTERNATING COLORS)-->
 			<p><span class="title1">D</span><span class="title2">I</span><span class="title1">S</span><span class="title2">-</span><span class="title1">C</span><span class="title2">A</span><span class="title1">R</span><span class="title2">D</span>
-				<br><span class="title1"><a href="index.html">I</a></span></p>
+				<br><span class="title1"><a href="../index.html">I</a></span></p>
 			<br><br>
 			<!--CENTER BUTTONS-->
-			<p><button type="button" class="rules" onclick="window.open('documents/DIS-CARD I Instructions.pdf')">How to play</button><br>
+			<p><button type="button" class="rules" onclick="window.open('../documents/DIS-CARD I Instructions.pdf')">How to play</button><br>
 				<button type="button" onClick="playAgain(1)">Play again</button>
 				<button type="button" onClick="keepScore()">Keep score</button></p>
 		</center>
@@ -291,7 +291,7 @@
 			</span>
 		</div>
 
-		<script src="bin/dis-card.js"></script>
+		<script src="dis-card.js"></script>
 		<script>hideResets(1);</script>
 	</body>
 </html>

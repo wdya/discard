@@ -6,7 +6,7 @@ var list2 = ["diamond", "heart", "lt7", "gt6", "red", "odd", "club", "spade", "f
 var list3 = ["kind4", "kind3", "kind2", "face", "lt7", "gt6", "row3", "row4", "red", "black", "even", "odd"];
 
 //HOUSEKEEPING WHILE GAME LOADS
-window.onload = function() {	
+window.onload = function() {
 	document.getElementById("scoreDIV").style.display = "none"; //HIDE SCOREBOARD
 
 	//CONSTANTLY CHECK FOR CLICKS (TRIGGERING toggleHighlight) IN EACH OF THE 12 CELLS
@@ -19,12 +19,12 @@ window.onload = function() {
 function keepScore() {
 	var x = document.getElementById("scoreDIV");
 	var y = document.getElementById("copyrightDIV");
-	if (x.style.display === "none") {
-		y.style.display = "none";
-		x.style.display = "block";
+	if (x.style.display === "none") { //IF SCOREBOARD HIDDEN
+		y.style.display = "none"; //HIDE COPYRIGHT
+		x.style.display = "block"; //SHOW SCOREBOARD 
 	} else {
-		x.style.display = "none";
-		y.style.display = "block";	
+		x.style.display = "none"; // OTHERWISE HIDE SCOREBOARD
+		y.style.display = "block"; //SHOW COPYRIGHT
 	}
 }
 
@@ -54,8 +54,6 @@ function resetCell(cell, int) {
 	divContent = document.getElementById("" + cell + "DIV");
 	divButton = document.getElementById("" + cell + "Button");
 	divContent.style.display = "block";
-	//document.getElementById(cell + "1").checked = true; //UNCHECK EACH FIRST BOX
-	//document.getElementById(cell + "2").checked = true; //UNCHECK EACH SECOND BOX
 	if (int === 1) document.getElementById(cell + "3").checked = false; //UNCHECK EACH THIRD BOX
 	else document.getElementById(cell + "2").checked = false; //UNCHECK EACH SECOND BOX
 	//document.getElementById(cell).className = 'sidesContent';
@@ -89,10 +87,10 @@ function visibility(cell, int) {
 //ADD FADE CLASS TO TRIGGERED CELL DIV (ABOVE)
 function fade(divContent, divButton) {
 	divContent.classList.add('fadeOut');
-	setTimeout(function() { //AFTER ANIMATION ENDS, REMOVE ANIMATION CLASS, HIDE DIV NORMALLY
-		divContent.style.display = "none";
-		divContent.className = 'toFade';
-		divButton.style.display = "block";
+	setTimeout(function() { //AFTER 2 SECOND ANIMATION...
+		divContent.style.display = "none"; //HIDE DIV NORMALLY
+		divContent.className = 'toFade'; //REMOVE ANIMATION CLASS
+		divButton.style.display = "block"; //SHOW RESET BUTTON
 	}, 2000);
 }
 
@@ -109,7 +107,7 @@ points = {
 //CALCULATE, MODIFY, AND UPDATE POINTS
 function getPoints(num, sign) {
 	var pointsX = "points" + num; //RECONSTRUCT PLAYER'S POINTS VARIABLE
-	if (sign) points[pointsX]++;
-	else if (!sign) points[pointsX]--;
+	if (sign) points[pointsX]++; //ADD 1 POINT
+	else if (!sign) points[pointsX]--; //SUBTRACT 1 POINT
 	document.getElementById(pointsX).innerHTML = points[pointsX]; //UPDATE SCOREBOARD DISPLAY
 }
