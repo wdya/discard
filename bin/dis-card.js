@@ -34,6 +34,12 @@ function toggleHighlight() {
 	cell.classList.toggle('highlight');
 }
 
+/*//SWITCH 'BOTTOM' CELL CLASS ON AND OFF (FOR RESET BUTTONS)
+function toggleBottom() {
+	var cell = this();
+	cell.classList.toggle('bottom');
+}*/
+
 //RESET ALL
 function playAgain(int){
 	if (int === 1) cells = ["heart", "diamond", "number", "club", "face", "spade"];
@@ -49,40 +55,46 @@ function playAgain(int){
 	}
 }
 
+//RESET ONE
+function resetCell(cell, int) {
+	divContent = document.getElementById("" + cell + "DIV");
+	divButton = document.getElementById("" + cell + "Button");
+	divContent.style.display = "block";
+	//document.getElementById(cell + "1").checked = true; //UNCHECK EACH FIRST BOX
+	//document.getElementById(cell + "2").checked = true; //UNCHECK EACH SECOND BOX
+	if (int === 1) document.getElementById(cell + "3").checked = false; //UNCHECK EACH THIRD BOX
+	else document.getElementById(cell + "2").checked = false; //UNCHECK EACH SECOND BOX
+	//document.getElementById(cell).className = 'sidesContent';
+	divButton.style.display = "none";
+}
+
 //TRIGGER CELL DIV FADE WHEN ALL BOXES ARE CHECKED
 function visibility(cell, int) {
 	divContent = document.getElementById("" + cell + "DIV");
 	divButton = document.getElementById("" + cell + "Button");
 	if (int === 2)
 		if (document.getElementById("" + cell + "1").checked
-			&& document.getElementById("" + cell + "2").checked)
+			&& document.getElementById("" + cell + "2").checked) {
 				fade(divContent, divButton); //RECONSTRUCT elementDIV VARIABLE, CALL FADE
+				//toggleBottom(cell);
+			}
 	if (int === 3)
 		if (document.getElementById("" + cell + "1").checked
 			&& document.getElementById("" + cell + "2").checked
-				&& document.getElementById("" + cell + "3").checked)
+				&& document.getElementById("" + cell + "3").checked) {
 					fade(divContent, divButton); //RECONSTRUCT elementDIV VARIABLE, CALL FADE
+					//toggleBottom(cell);
+				}
 }
 
 //ADD FADE CLASS TO TRIGGERED CELL DIV (ABOVE)
 function fade(divContent, divButton) {
 	divContent.classList.add('fadeOut');
-	setTimeout(function(){ //AFTER ANIMATION ENDS, REMOVE ANIMATION CLASS, HIDE DIV NORMALLY
+	setTimeout(function() { //AFTER ANIMATION ENDS, REMOVE ANIMATION CLASS, HIDE DIV NORMALLY
 		divContent.style.display = "none";
 		divContent.className = 'toFade';
 		divButton.style.display = "block";
 	}, 2000);
-}
-
-function resetCell(cell, int) {
-	divContent = document.getElementById("" + cell + "DIV");
-	divButton = document.getElementById("" + cell + "Button");
-	divContent.style.display = "block";
-	document.getElementById(cell + "1").checked = false; //UNCHECK EACH FIRST BOX
-	document.getElementById(cell + "2").checked = false; //UNCHECK EACH SECOND BOX
-	if (int === 1) document.getElementById(cell + "3").checked = false; //UNCHECK EACH THIRD BOX
-	//document.getElementById(cell).className = 'sidesContent';
-	divButton.style.display = "none";
 }
 
 //OBJECT TO CONTAIN POINTS VARIABLES

@@ -40,9 +40,12 @@ td.sidesContent {
 	vertical-align: middle;
 	height: 250px;
 }
-td.sidesContent.highlight{
+td.sidesContent.highlight {
 	background: yellow;
 }
+/*td.sidesContent.bottom {
+	vertical-align: bottom;
+}*/
 
 /*STYLING THE FADE-OUT EFFECT*/
 .toFade {
@@ -94,8 +97,8 @@ button.rules {
 	font-weight: bold;
 }
 button.reset {
-	line-height: 38px;
-	font-size: 38px;
+	line-height: 24px;
+	font-size: 24px;
 	font-weight: bold;
 	background-color: lightgray;
 }
